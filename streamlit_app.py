@@ -35,7 +35,7 @@ with open(model_pkl_file, 'rb') as file:
     model = pickle.load(file)
 
 
-model.fit(X_train,y_train1)
+# model.fit(X_train,y_train1)
 
     
 
