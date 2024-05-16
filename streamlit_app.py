@@ -8,7 +8,7 @@ import streamlit as st
 import joblib
 
 import pickle
-import os
+#import os
 
 import pandas as pd    # data preprocessing
 import numpy as np      # linear algebra
@@ -17,17 +17,17 @@ import numpy as np      # linear algebra
 
 # path = os.getcwd()
 # print("The current path is:",path)
-os.chdir("/Users/naeem/Downloads/Crude_Data")
-path1 = os.getcwd()
+# os.chdir("/Users/naeem/Downloads/Crude_Data")
+# path1 = os.getcwd()
 # print("The changed path is:", path1)
 
-X_test  = pd.read_csv('CrudeAllocation_IO_XtestData.csv', index_col=False)
-X_train = pd.read_csv('CrudeAllocation_IO_XtrainData.csv', index_col=False)
-y_test  = pd.read_csv('CrudeAllocation_IO_ytestData.csv', index_col=False)
-y_train = pd.read_csv('CrudeAllocation_IO_ytrainData.csv', index_col=False)
+# X_test  = pd.read_csv('CrudeAllocation_IO_XtestData.csv', index_col=False)
+# X_train = pd.read_csv('CrudeAllocation_IO_XtrainData.csv', index_col=False)
+# y_test  = pd.read_csv('CrudeAllocation_IO_ytestData.csv', index_col=False)
+# y_train = pd.read_csv('CrudeAllocation_IO_ytrainData.csv', index_col=False)
 
-y_train1 = y_train['Total_BottomFlow_MBD'].values
-y_test1 = y_test['Total_BottomFlow_MBD'].values
+# y_train1 = y_train['Total_BottomFlow_MBD'].values
+# y_test1 = y_test['Total_BottomFlow_MBD'].values
 
 model_pkl_file = "Crude_Allocation_IO.pkl"  
 # load model from pickle file
@@ -35,11 +35,11 @@ with open(model_pkl_file, 'rb') as file:
     model = pickle.load(file)
 
 
-model.fit(X_train,y_train1)
+# model.fit(X_train,y_train1)
 
     
 
-st.title('Prediction of Crude Oil')
+st.title('Oil Allocation UAT')
 st.markdown(' #### Draft dashboard for the crude allocation project ')
 
 st.header("Inputs for Total Bottom Flow (MBD)")
