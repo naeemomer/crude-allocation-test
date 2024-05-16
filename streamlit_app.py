@@ -21,13 +21,13 @@ from sklearn.ensemble import ExtraTreesRegressor
 # path1 = os.getcwd()
 # print("The changed path is:", path1)
 
-X_test  = pd.read_csv('CrudeAllocation_IO_XtestData.csv', index_col=False)
+# X_test  = pd.read_csv('CrudeAllocation_IO_XtestData.csv', index_col=False)
 X_train = pd.read_csv('CrudeAllocation_IO_XtrainData.csv', index_col=False)
-y_test  = pd.read_csv('CrudeAllocation_IO_ytestData.csv', index_col=False)
+# y_test  = pd.read_csv('CrudeAllocation_IO_ytestData.csv', index_col=False)
 y_train = pd.read_csv('CrudeAllocation_IO_ytrainData.csv', index_col=False)
 
 y_train1 = y_train['Total_BottomFlow_MBD'].values
-y_test1 = y_test['Total_BottomFlow_MBD'].values
+#y_test1 = y_test['Total_BottomFlow_MBD'].values
 
 model_pkl_file = "Crude_Allocation_IO.pkl"  
 # load model from pickle file
