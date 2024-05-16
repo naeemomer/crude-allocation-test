@@ -12,7 +12,7 @@ import pickle
 
 import pandas as pd    # data preprocessing
 import numpy as np      # linear algebra
-from sklearn.ensemble import ExtraTreesRegressor
+# from sklearn.ensemble import ExtraTreesRegressor
 # Load the trained model
 
 # path = os.getcwd()
@@ -34,7 +34,7 @@ model_pkl_file = "Crude_Allocation_IO.pkl"
 with open(model_pkl_file, 'rb') as file:  
     model = pickle.load(file)
 
-# model.fit(X_train,y_train1)
+model.fit(X_train,y_train)
 # model.predict(X_test)
     
 
