@@ -34,9 +34,8 @@ model_pkl_file = "Crude_Allocation_IO.pkl"
 with open(model_pkl_file, 'rb') as file:  
     model = pickle.load(file)
 
-
 # model.fit(X_train,y_train1)
-
+# model.predict(X_test)
     
 
 st.title('Oil Allocation UAT')
